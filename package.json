@@ -3,8 +3,13 @@
 	"displayName": "Code Metrics Analyzer",
 	"description": "Анализатор метрик кода для файлов",
 	"version": "1.0.0",
+	"publisher": "galyavetdinov-bulat",
 	"engines": {
 		"vscode": "^1.106.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vince00-dev/code-analyzer-extension"
 	},
 	"categories": [
 		"Linters",
