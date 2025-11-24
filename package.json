@@ -1,0 +1,49 @@
+{
+	"name": "code-metrics-analyzer",
+	"displayName": "Code Metrics Analyzer",
+	"description": "Анализатор метрик кода для файлов",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.106.0"
+	},
+	"categories": [
+		"Linters",
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "codeMetrics.analyzeFile",
+				"title": "Анализ метрик файла"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "codeMetrics.analyzeFile",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src",
+		"test": "vscode-test"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.106.0",
+		"@types/mocha": "^10.0.10",
+		"@types/node": "22.x",
+		"typescript-eslint": "^8.46.3",
+		"eslint": "^9.39.1",
+		"typescript": "^5.9.3",
+		"@vscode/test-cli": "^0.0.12",
+		"@vscode/test-electron": "^2.5.2"
+	}
+}
